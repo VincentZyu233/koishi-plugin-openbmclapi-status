@@ -1,21 +1,43 @@
 {
   "name": "koishi-plugin-openbmclapi-status",
-  "description": "﻿﻿OpenBMCLAPI 监控助手",
-  "version": "0.0.1",
+  "description": "🚀 OpenBMCLAPI 状态查询与节点监控助手，支持全网大盘、节点天梯排行榜、节点搜索与私有节点掉线监控，支持纯文本、Takumi 极速出图及 QQ 原生 Markdown。",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "uv run --with pytest --with httpx pytest test/ -v"
+  },
   "files": [
     "lib",
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "openbmclapi",
+    "bmclapi",
+    "minecraft",
+    "status",
+    "cluster"
   ],
-  "devDependencies": {},
+  "author": "VincentZyu",
+  "koishi": {
+    "description": {
+      "zh": "🚀 OpenBMCLAPI 状态查询与节点监控助手，支持全网大盘、节点天梯榜、节点搜索与掉线报警，支持文本/Takumi图片/QQ Markdown多模式输出。",
+      "en": "🚀 OpenBMCLAPI cluster status & node monitor assistant for Koishi."
+    },
+    "service": {
+      "required": [
+        "http"
+      ]
+    }
+  },
+  "dependencies": {
+    "@takumi-rs/helpers": "^1.8.7",
+    "@takumi-rs/wasm": "^1.8.7"
+  },
   "peerDependencies": {
     "koishi": "^4.18.7"
   }
